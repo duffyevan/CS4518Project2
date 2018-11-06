@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void onButton(View view){
+    public void onTakePictureButtonPressed(View view){
         Intent takePictureIntent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         List<ResolveInfo> activities = getPackageManager().queryIntentActivities(takePictureIntent,0);
         startActivityForResult(takePictureIntent, REQUEST_IMAGE_CAPTURE);
